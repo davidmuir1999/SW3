@@ -18,7 +18,7 @@
                 <img class="click" id="SW3__logo" src="./Assets/SW3 Logo_prev_ui.png" alt="">
                 <ul class="nav__link--list">
                     <li class="nav__link click">
-                        <a href="#" class="
+                        <a href="#Latest-Releases" class="
                     nav__link--anchor
                     link__hover-effect
                     ">MUSIC</a>
@@ -59,27 +59,72 @@
             <video class="promo__video" autoplay loop muted src="./Assets/SW3_Logo_Promo.mp4" type="video/mp4"></video>
         </div>
     </section>
-    <section>
+    <section id="Latest-Releases">
         <div class="track__container">
             <div class="track__row">
                 <div>
-                    <h1 class="section__title">
-                        Latest Releases
+                    <h1 class="track__section--title">
+                        LATEST RELEASES
                     </h1>
-                </div>
-                <div class="track__layout">
-                    <figure class="track__img">
-                        <img src="./Assets/Fool-Of-Me-SW3-Amanda-Wilson-Radio-Edit.jpg" alt="">
-                    </figure>
-                    <div>
-                        <button class="listen__btn">LISTEN NOW</button>
-                        <figure>
-                            <img src="./Assets/Fool-Of-Me-SW3-Amanda-Wilson-Radio-Edit - Copy.jpg" alt="">
-                        </figure>
-                    </div>
                 </div>
             </div>
         </div>
+        <div class="track__container--single">
+            <div>
+                <img class="track1__single--cover" src="./Assets/Fool-Of-Me-SW3-Amanda-Wilson-Radio-Edit.jpg" alt="">
+            </div>
+            <div class="track1__btn--container">
+                <a href="#" class="track1__single--btn btn" onclick="toggleModal()">LISTEN NOW</a>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <img class="modal__img" src="./Assets/Fool-Of-Me-SW3-Amanda-Wilson-Radio-Edit.jpg" alt="">
+            </div>
+            <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <i class="fa-brands fa-spotify"></i>
+                        <span class="language__name">SPOTIFY</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <i class="fa-brands fa-apple"></i>
+                        <span class="language__name">APPLE MUSIC</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <i class="fa-brands fa-youtube"></i>
+                        <span class="language__name">YOUTUBE</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <i class="fa-brands fa-deezer"></i>
+                        <span class="language__name">DEEZER</span>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="yt-video__container">
+            <div class="yt-video__row">
+                <iframe class="video" src="https://www.youtube.com/embed/dqu9MRCfwhM" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="track__container--single">
+            <div>
+                <img class="track2__single--cover" src="./Assets/Fool-Of-Me-SW3-Amanda-Wilson-Alex-Kirsch-Remix.jpg" alt="">
+            </div>
+            <div class="track2__btn--container">
+                <a class="track2__single--btn btn" href="">LISTEN NOW</a>
+            </div>
+        </div>
+    </section>
+    <section id="About">
+
     </section>
 
 </body>
