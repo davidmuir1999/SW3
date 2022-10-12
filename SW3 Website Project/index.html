@@ -24,7 +24,7 @@
                     ">MUSIC</a>
                     </li>
                     <li class="nav__link click">
-                        <a href="#projects" class="
+                        <a href="#About" class="
                     nav__link--anchor
                     link__hover-effect
                     ">ABOUT</a>
@@ -70,7 +70,7 @@
             </div>
         </div>
         <div id="track1-cover" class="track__container--single">
-            <div >
+            <div>
                 <img class="track1__single--cover" src="./Assets/Fool-Of-Me-SW3-Amanda-Wilson-Radio-Edit.jpg" alt="">
             </div>
             <div class="track1__btn--container">
@@ -103,28 +103,61 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section>
         <div class="yt-video__container">
             <div class="yt-video__row">
-                <iframe class="video" src="https://www.youtube.com/embed/dqu9MRCfwhM" title="YouTube video player" frameborder="0"
+                <iframe class="video" src="https://www.youtube.com/embed/dqu9MRCfwhM" title="YouTube video player"
+                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
         </div>
-    </section>
-    <section>
-        <div class="track__container--single">
+        <div id="track2-cover" class="track__container--single">
             <div>
-                <img class="track2__single--cover" src="./Assets/Fool-Of-Me-SW3-Amanda-Wilson-Alex-Kirsch-Remix.jpg" alt="">
+                <img class="track2__single--cover" src="./Assets/Fool-Of-Me-SW3-Amanda-Wilson-Alex-Kirsch-Remix.jpg"
+                    alt="">
             </div>
             <div class="track2__btn--container">
-                <a class="track2__single--btn btn" href="">LISTEN NOW</a>
+                <a href="#track2-cover" class="track2__single--btn btn" onclick="toggleModal2()">LISTEN NOW</a>
+            </div>
+            <div class="modal">
+                <div class="modal__half modal__about">
+                    <img class="modal__img" src="./Assets/Fool-Of-Me-SW3-Amanda-Wilson-Alex-Kirsch-Remix.jpg" alt="">
+                </div>
+                <div class="modal__half modal__contact">
+                    <i class="fas fa-times modal__exit click" onclick="toggleModal2()"></i>
+                    <div class="modal__languages">
+                        <figure class="modal__language">
+                            <i class="fa-brands fa-spotify"></i>
+                            <span class="language__name">SPOTIFY</span>
+                        </figure>
+                        <figure class="modal__language">
+                            <i class="fa-brands fa-apple"></i>
+                            <span class="language__name">APPLE MUSIC</span>
+                        </figure>
+                        <figure class="modal__language">
+                            <i class="fa-brands fa-youtube"></i>
+                            <span class="language__name">YOUTUBE</span>
+                        </figure>
+                        <figure class="modal__language">
+                            <i class="fa-brands fa-deezer"></i>
+                            <span class="language__name">DEEZER</span>
+                        </figure>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <section id="About">
-
+        <div class="about__container">
+            <div class="frosted">
+                <h1 class="about__header">ABOUT</h1>
+                <p class="about__para">SW3 Music are a UK based <span class="orange">Artist Development & Songwriting Production Team</span>  who
+                    have been involved in the music industry for many years.</p>
+                <p class="about__para">We have written songs for international artists and understand the importance of
+                    writing and producing commercial songs. SW3 Music has a team of talented songwriters and is <span class="orange">always
+                        on the look out for new talent.</span>  We also have a music publishing division.</p>
+            </div>
+        </div>
     </section>
 
 </body>

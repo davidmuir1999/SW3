@@ -32,12 +32,16 @@ a {
     transform: scale(0.8);
 }
 
+.orange{
+    color: #fdae41;
+}
+
 /* Nav Bar */
 
 nav {
     margin: 0 auto;
     display: flex;
-    height: 80px;
+    height: 100px;
 }
 
 .nav__container{
@@ -51,8 +55,8 @@ nav {
 }
 
 #SW3__logo {
-    width: 80px;
-    height: 80px;
+    width: 88px;
+    height: 88px;
 }
 
 .link__hover-effect {
@@ -517,4 +521,60 @@ nav {
     box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55); ;
 }
 
+/* About */
 
+.about__container{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(./Assets/slider-1b.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    border-bottom: 4px solid #fdae41;
+}
+
+.frosted{
+    
+    width: min(100% - 15px, 840px);
+    height: 340px;
+    margin-inline: auto;
+    border-radius: 40px;
+    background: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    flex-direction: column;
+    padding: 40px 80px;
+}
+
+.about__header{
+    font-size: 40px;
+    font-weight: bold;
+
+}
+
+.about__para{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.frosted::after{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    right: -10px;
+    left: -10px;
+    background: inherit;
+    box-shadow: inset 0 0 2000px rgba(25, 80, 151, 0.5);
+    filter: blur(10px);
+    
+}

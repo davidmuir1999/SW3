@@ -1,4 +1,5 @@
 let isModalOpen1 = false;
+let isModalOpen2 = false;
 
 function toggleModal1() {
     if (isModalOpen1) {
@@ -8,8 +9,6 @@ function toggleModal1() {
     isModalOpen1 = true;
     document.body.classList += " modal--open";
 }
-
-let isModalOpen2 = false;
 
 function toggleModal2() {
     if (isModalOpen2) {
