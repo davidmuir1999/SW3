@@ -17,6 +17,10 @@ li {
 
 a {
     text-decoration: none;
+    color: white;
+}
+section {
+    transition: all 300ms ease;
 }
 
 .click {
@@ -91,6 +95,12 @@ nav {
     font-size: 16px;
     color: white;
     font-weight: 700;
+}
+
+.socials{
+    color: white;
+    font-size: 18px;
+    padding: 0px 12px;
 }
 
 
@@ -288,6 +298,29 @@ nav {
 
 .video__container{
     background-color: #181818;
+}
+
+.mail__btn{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    background-color: #fdae41;
+    position: fixed;
+    bottom: 32px;
+    right: 40px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: white;
+    z-index: 100;
+    box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.28);
+}
+
+.envelope__icon{
+    height: 32px;
+    width: 32px;
 }
 
 /* Track Section */
@@ -498,7 +531,6 @@ nav {
 
 .modal__contact{
     background-color:#242424;
-    color: white;
     transform: translateX(110%);
 }
 
@@ -578,3 +610,41 @@ nav {
     filter: blur(10px);
     
 }
+
+  /* Footer */
+
+  .footer__container{
+    width: 100%;
+  }
+
+  footer{
+    position: relative;
+    background-color: #181818;
+    display: flex;
+    padding: 6% 0;
+  }
+
+  .footer__row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__img{
+    width: 120px;
+    height: 120px;
+    padding-bottom: 8px;
+  }
+
+  .footer__social--list{
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+
+  .footer__social--link, .footer__copyright{
+    color: white;
+    padding: 8px;
+  }

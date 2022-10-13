@@ -12,10 +12,12 @@
 </head>
 
 <body>
-    <section>
+    <section id="Home">
         <nav>
             <div class="nav__container">
-                <img class="click" id="SW3__logo" src="./Assets/SW3 Logo_prev_ui.png" alt="">
+                <a href="#Home">
+                    <img class="click" id="SW3__logo" src="./Assets/SW3 Logo_prev_ui.png" alt="">
+                </a>
                 <ul class="nav__link--list">
                     <li class="nav__link click">
                         <a href="#Latest-Releases" class="
@@ -30,10 +32,15 @@
                     ">ABOUT</a>
                     </li>
                     <li class="nav__link click">
-                        <a href="#" class="
+                        <a href="#" onclick="toggleModal()" class="
                     nav__link--anchor
                     link__hover-effect
                     ">CONTACT US</a>
+                    </li>
+                    <li class="nac__link click">
+                        <a href="https://www.facebook.com/SW3MUSICUK" target="_blank" class="socials">
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -57,6 +64,77 @@
         </header>
         <div class="video__container">
             <video class="promo__video" autoplay loop muted src="./Assets/SW3_Logo_Promo.mp4" type="video/mp4"></video>
+        </div>
+        <a href="#">
+            <button class="mail__btn click" onclick="toggleModal()">
+                <i class="fa-solid fa-envelope"></i>
+            </button>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title">Here's a bit about me.</h3>
+                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
+                <p class="modal__para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, illo quibusdam. Quis impedit rem
+                    fugiat corrupti excepturi blanditiis, asperiores cum. Aliquid, est magni quasi fuga enim officiis
+                    nobis modi numquam!
+                    <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tempore quaerat dignissimos temporibus
+                    provident sed non ipsum labore beatae nemo eum fugiat minus in dolore obcaecati, consequuntur,
+                    voluptatibus possimus cumque.
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/html5-logo-31813.png" alt="">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/html5-logo-31813.png" alt="">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/html5-logo-31813.png" alt="">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/html5-logo-31813.png" alt="">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                </div>
+
+            </div>
+            <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contact">
+                    Let's have a chat!
+                </h3>
+                <h4 class="modal__sub-title modal__sub-title--contact">
+                    I'm currently open to new oppoertunites.
+                </h4>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input class="input" name="user_name" type="text"></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input class="input" name="user_email" type="email"></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea class="input" name="message" type="text"></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">
+                        Send it my way
+                    </button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message! Looking forward to speaking to you soon.
+                </div>
+            </div>
         </div>
     </section>
     <section id="Latest-Releases">
@@ -126,22 +204,31 @@
                 <div class="modal__half modal__contact">
                     <i class="fas fa-times modal__exit click" onclick="toggleModal2()"></i>
                     <div class="modal__languages">
-                        <figure class="modal__language">
-                            <i class="fa-brands fa-spotify"></i>
-                            <span class="language__name">SPOTIFY</span>
-                        </figure>
-                        <figure class="modal__language">
-                            <i class="fa-brands fa-apple"></i>
-                            <span class="language__name">APPLE MUSIC</span>
-                        </figure>
-                        <figure class="modal__language">
-                            <i class="fa-brands fa-youtube"></i>
-                            <span class="language__name">YOUTUBE</span>
-                        </figure>
-                        <figure class="modal__language">
-                            <i class="fa-brands fa-deezer"></i>
-                            <span class="language__name">DEEZER</span>
-                        </figure>
+                        <a href="https://open.spotify.com/artist/2IXHJyGGK9nl01jVxtg7PV" target="_blank">
+                            <figure class="modal__language">
+
+                                <i class="fa-brands fa-spotify"></i>
+                                <span class="language__name">SPOTIFY</span>
+                            </figure>
+                        </a>
+                        <a href="https://music.apple.com/album/id/1639474121" target="_blank">
+                            <figure class="modal__language">
+                                <i class="fa-brands fa-apple"></i>
+                                <span class="language__name">APPLE MUSIC</span>
+                            </figure>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=dqu9MRCfwhM" target="_blank">
+                            <figure class="modal__language">
+                                <i class="fa-brands fa-youtube"></i>
+                                <span class="language__name">YOUTUBE</span>
+                            </figure>
+                        </a>
+                        <a href="https://www.deezer.com/en/album/345838007" target="_blank">
+                            <figure class="modal__language">
+                                <i class="fa-brands fa-deezer"></i>
+                                <span class="language__name">DEEZER</span>
+                            </figure>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -151,15 +238,54 @@
         <div class="about__container">
             <div class="frosted">
                 <h1 class="about__header">ABOUT</h1>
-                <p class="about__para">SW3 Music are a UK based <span class="orange">Artist Development & Songwriting Production Team</span>  who
+                <p class="about__para">SW3 Music are a UK based <span class="orange">Artist Development & Songwriting
+                        Production Team</span> who
                     have been involved in the music industry for many years.</p>
                 <p class="about__para">We have written songs for international artists and understand the importance of
-                    writing and producing commercial songs. SW3 Music has a team of talented songwriters and is <span class="orange">always
-                        on the look out for new talent.</span>  We also have a music publishing division.</p>
+                    writing and producing commercial songs. SW3 Music has a team of talented songwriters and is <span
+                        class="orange">always
+                        on the look out for new talent.</span> We also have a music publishing division.</p>
             </div>
         </div>
     </section>
-
+    <footer>
+        <div class="footer__container">
+            <div class="row footer__row">
+                <figure>
+                    <a href="#Home">
+                        <img class="footer__img click" src="./Assets/SW3 Logo_prev_ui.png" alt="">
+                    </a>
+                </figure>
+                <div class="footer__social--list">
+                    <a href="#Home" class="footer__social--link
+                link__hover-effect
+                click
+                ">
+                        Home
+                    </a>
+                    <a href="#Latest-Releases" class="footer__social--link
+                link__hover-effect
+                click
+                ">
+                        Music
+                    </a>
+                    <a href="#About" class="footer__social--link
+                link__hover-effect
+                click
+                ">
+                        About Us
+                    </a>
+                    <a href="#" onclick="toggleModal()" class="footer__social--link
+                link__hover-effect
+                click
+                ">
+                        Contact Us
+                    </a>
+                </div>
+                <div class="footer__copyright">© 2022 SW3 Music. All Rights Reserved. </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
