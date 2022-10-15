@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="./styles.css">
     <script src="https://kit.fontawesome.com/8c40c3a30f.js" crossorigin="anonymous"></script>
     <script src="/app.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <!-- <script type="text/javascript">
+        (function () {
+            emailjs.init("dSlgm8_3vYYWH9niU");
+        })();
+    </script> -->
 </head>
 
 <body>
@@ -72,44 +79,17 @@
         </a>
         <div class="modal">
             <div class="modal__half modal__about">
-                <h3 class="modal__title">Here's a bit about me.</h3>
-                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
-                <p class="modal__para">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, illo quibusdam. Quis impedit rem
-                    fugiat corrupti excepturi blanditiis, asperiores cum. Aliquid, est magni quasi fuga enim officiis
-                    nobis modi numquam!
-                    <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tempore quaerat dignissimos temporibus
-                    provident sed non ipsum labore beatae nemo eum fugiat minus in dolore obcaecati, consequuntur,
-                    voluptatibus possimus cumque.
-                </p>
-                <div class="modal__languages">
-                    <figure class="modal__language">
-                        <img class="modal__language--img" src="./assets/html5-logo-31813.png" alt="">
-                        <span class="language__name">HTML</span>
-                    </figure>
-                    <figure class="modal__language">
-                        <img class="modal__language--img" src="./assets/html5-logo-31813.png" alt="">
-                        <span class="language__name">HTML</span>
-                    </figure>
-                    <figure class="modal__language">
-                        <img class="modal__language--img" src="./assets/html5-logo-31813.png" alt="">
-                        <span class="language__name">HTML</span>
-                    </figure>
-                    <figure class="modal__language">
-                        <img class="modal__language--img" src="./assets/html5-logo-31813.png" alt="">
-                        <span class="language__name">HTML</span>
-                    </figure>
-                </div>
-
+                <figure class="modal__img">
+                    <img src="./Assets/SW3 Logo_prev_ui.png" alt="">
+                </figure>
             </div>
             <div class="modal__half modal__contact">
                 <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
                 <h3 class="modal__title modal__title--contact">
-                    Let's have a chat!
+                    Contact Us
                 </h3>
                 <h4 class="modal__sub-title modal__sub-title--contact">
-                    I'm currently open to new oppoertunites.
+                    We aim to respond to you as soon as possible!
                 </h4>
                 <form id="contact__form" onsubmit="contact(event)">
                     <div class="form__item">
@@ -125,14 +105,14 @@
                         <textarea class="input" name="message" type="text"></textarea>
                     </div>
                     <button id="contact__submit" class="form__submit">
-                        Send it my way
+                        Submit
                     </button>
                 </form>
                 <div class="modal__overlay modal__overlay--loading">
                     <i class="fas fa-spinner"></i>
                 </div>
                 <div class="modal__overlay modal__overlay--success">
-                    Thanks for the message! Looking forward to speaking to you soon.
+                    Thanks for the message! We look forward to speaking to you soon.
                 </div>
             </div>
         </div>
@@ -152,34 +132,9 @@
                 <img class="track1__single--cover" src="./Assets/Fool-Of-Me-SW3-Amanda-Wilson-Radio-Edit.jpg" alt="">
             </div>
             <div class="track1__btn--container">
-                <a href="#track1-cover" class="track1__single--btn btn" onclick="toggleModal1()">LISTEN NOW</a>
+                <a href="#track1-cover" class="track1__single--btn btn">LISTEN NOW</a>
             </div>
-            <div class="modal">
-                <div class="modal__half modal__about">
-                    <img class="modal__img" src="./Assets/Fool-Of-Me-SW3-Amanda-Wilson-Radio-Edit.jpg" alt="">
-                </div>
-                <div class="modal__half modal__contact">
-                    <i class="fas fa-times modal__exit click" onclick="toggleModal1()"></i>
-                    <div class="modal__languages">
-                        <figure class="modal__language">
-                            <i class="fa-brands fa-spotify"></i>
-                            <span class="language__name">SPOTIFY</span>
-                        </figure>
-                        <figure class="modal__language">
-                            <i class="fa-brands fa-apple"></i>
-                            <span class="language__name">APPLE MUSIC</span>
-                        </figure>
-                        <figure class="modal__language">
-                            <i class="fa-brands fa-youtube"></i>
-                            <span class="language__name">YOUTUBE</span>
-                        </figure>
-                        <figure class="modal__language">
-                            <i class="fa-brands fa-deezer"></i>
-                            <span class="language__name">DEEZER</span>
-                        </figure>
-                    </div>
-                </div>
-            </div>
+            
         </div>
         <div class="yt-video__container">
             <div class="yt-video__row">
@@ -195,42 +150,7 @@
                     alt="">
             </div>
             <div class="track2__btn--container">
-                <a href="#track2-cover" class="track2__single--btn btn" onclick="toggleModal2()">LISTEN NOW</a>
-            </div>
-            <div class="modal">
-                <div class="modal__half modal__about">
-                    <img class="modal__img" src="./Assets/Fool-Of-Me-SW3-Amanda-Wilson-Alex-Kirsch-Remix.jpg" alt="">
-                </div>
-                <div class="modal__half modal__contact">
-                    <i class="fas fa-times modal__exit click" onclick="toggleModal2()"></i>
-                    <div class="modal__languages">
-                        <a href="https://open.spotify.com/artist/2IXHJyGGK9nl01jVxtg7PV" target="_blank">
-                            <figure class="modal__language">
-
-                                <i class="fa-brands fa-spotify"></i>
-                                <span class="language__name">SPOTIFY</span>
-                            </figure>
-                        </a>
-                        <a href="https://music.apple.com/album/id/1639474121" target="_blank">
-                            <figure class="modal__language">
-                                <i class="fa-brands fa-apple"></i>
-                                <span class="language__name">APPLE MUSIC</span>
-                            </figure>
-                        </a>
-                        <a href="https://www.youtube.com/watch?v=dqu9MRCfwhM" target="_blank">
-                            <figure class="modal__language">
-                                <i class="fa-brands fa-youtube"></i>
-                                <span class="language__name">YOUTUBE</span>
-                            </figure>
-                        </a>
-                        <a href="https://www.deezer.com/en/album/345838007" target="_blank">
-                            <figure class="modal__language">
-                                <i class="fa-brands fa-deezer"></i>
-                                <span class="language__name">DEEZER</span>
-                            </figure>
-                        </a>
-                    </div>
-                </div>
+                <a href="#track2-cover" class="track2__single--btn btn">LISTEN NOW</a>
             </div>
         </div>
     </section>
