@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
 
 * {
     margin: 0;
@@ -74,6 +75,8 @@ label{
     font-weight: bold;
 }
 
+/* Loader */
+
 /* Nav Bar */
 
 nav {
@@ -130,15 +133,6 @@ nav {
     color: white;
     font-weight: 700;
 }
-
-.socials{
-    color: white;
-    font-size: 18px;
-    padding: 0px 12px;
-}
-
-
-
 /* Landing Page */
 
 .container {
@@ -392,36 +386,12 @@ nav {
 .track1__single--cover{
     width: 500px;
     border-radius: 32px;
-    box-shadow: 0px 0px 50px 4px #fd35d4;
-    transition: all 300ms ease;
-}
-
-.track1__single--cover:hover{
-    transform: scale(1.01);
-}
-
-.track1__btn--container{
-    margin-top: 80px;
-}
-
-.btn{
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-    padding: 12px 16px;
-    border-radius: 8px;
     transition: all 600ms ease;
 }
 
-.track1__single--btn, .btn{
-    color: #fd35d4;
-    border: 2px solid #fd35d4 ;
-}
-
-.track1__single--btn:hover{
-    background-color: #fd35d4;
-    color: white;
-    box-shadow: 0px 0px 20px 4px #fd35d4;
+.track1__single--cover:hover{
+    box-shadow: 0px 0px 50px 4px #fd35d4;
+    transform: scale(1.05);   
 }
 
 .yt-video__container{
@@ -448,37 +418,53 @@ nav {
 .track2__single--cover{
     width: 500px;
     border-radius: 32px;
-    box-shadow: 0px 0px 50px 4px #fdae41;
-    transition: all 300ms ease;
-}
-
-.track2__single--cover:hover{
-    transform: scale(1.01);
-}
-
-.track2__btn--container{
-    margin-top: 80px;
-}
-
-.btn{
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 24px;
-    font-weight: bold;
-    padding: 12px 16px;
-    border-radius: 8px;
     transition: all 600ms ease;
 }
 
-.track2__single--btn{
-    color: #fdae41;
-    border: 2px solid #fdae41 ;
+.track2__single--cover:hover{
+    box-shadow: 0px 0px 50px 4px #fdae41;
+    transform: scale(1.05); 
 }
 
-.track2__single--btn:hover{
-    background-color: #fdae41;
-    color: white;
-    box-shadow: 0px 0px 20px 4px #fdae41;
+.socials__list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.socials__link{
+    width: 25%;
+    padding: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 300ms ease;
+
+}
+
+.socials__link:hover .socials__name{
+    transform: scale(1) ;
+}
+
+.socials__link:hover{
+    filter: brightness(80%);
+    transform: scale(0.9);
+}
+
+.socials__name{
+    position: absolute;
+    color: #dcdfe6;
+    bottom: -10px;
+    transform: scale(0);
+    transition: all 300ms ease;
+}
+
+.socials__link--icon{
+    font-size: 48px;
+    padding: 48px 18px 0 18px;
+    color: #dcdfe6;
+
+
 }
 
 /* Modal */
