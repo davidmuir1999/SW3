@@ -1,11 +1,10 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -133,6 +132,46 @@ nav {
     color: white;
     font-weight: 700;
 }
+
+.dropbtn{
+    background-color: #181818;
+    border: none;
+    outline: none;
+    margin-bottom: 12px;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown__content{
+    display: none;
+    position: absolute;
+    left: -16px;
+    background-color:#181818;
+    width: 180px;
+    height: 150px;
+    
+}
+
+.link{
+    padding: 12px;
+    font-size:16px;
+}
+
+.link:hover{
+    color: #fdae41;
+}
+
+
+.dropdown:hover .dropdown__content{
+    display: block;
+    
+    
+}
+
+
 /* Landing Page */
 
 .container {
@@ -705,6 +744,15 @@ nav {
     width: 120px;
     height: 120px;
     padding-bottom: 8px;
+  }
+
+  .footer__social--media{
+    font-size: 24px;
+    padding: 0px 12px;
+  }
+
+  .footer__social--media:hover{
+    color: #fdae41;
   }
 
   .footer__social--list{
