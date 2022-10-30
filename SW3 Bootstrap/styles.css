@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-fluid {
+    background-color: #181818;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.click {
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.click:hover {
+    transform: scale(1.1);
+}
+
+.click:active {
+    transform: scale(0.8);
+}
+
+.link__hover--effect {
+    position: relative;
+}
+
+.link__hover--effect::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    width: 0;
+    right: 0;
+    background-color: #fdae41;
+    transition: all 300ms ease;
+}
+
+.link__hover--effect:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+/* NAV BAR */
+
+nav {
+    background-color: #181818;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    z-index: 2;
+}
+
+.SW3__logo {
+    width: 72px;
+}
+
+.nav__link--list {
+    display: flex;
+
+}
+
+.nav__link {
+    padding: 16px 40px 0 0;
+
+}
+
+.nav__link--anchor {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.btn__menu {
+    background-color: transparent;
+    font-size: 32px;
+    border: none;
+    color: white;
+    display: none;
+}
+
+.menu__backdrop {
+    position: absolute;
+    background-color: #242424;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    transition: all 300ms ease;
+    opacity: 0;
+    transform: translate(100%);
+}
+
+.menu--open {
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.menu--open .menu__backdrop {
+    visibility: visible !important;
+    opacity: 1;
+    transform: translate(0);
+}
+
+.menu__links {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu__list {
+    margin: 28px 0px;
+}
+
+.menu__link {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.btn__menu--close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 8px;
+    color: white;
+    font-size: 36px;
+}
+
+.dropbtn {
+    background-color: #181818;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown__content {
+    display: none;
+    position: absolute;
+    left: -16px;
+    background-color: #181818;
+    width: 120px;
+    height: 200px;
+    margin-top: 4px;
+    padding-top: 16px;
+
+
+}
+
+.link {
+    padding: 8px;
+    font-size: 12px;
+
+}
+
+.link:hover {
+    color: #fdae41;
+}
+
+
+.dropdown:hover .dropdown__content {
+    display: block;
+}
+
+.menu__socials {
+    color: white;
+    font-size: 36px;
+    padding: 0px 12px;
+}
+
+/* SMALL PHONES, LARGE SMARTPHONES */
+@media (max-width: 650px) {
+    .btn__menu {
+        display: block;
+    }
+
+    .nav__link {
+        display: none;
+    }
+}
+
+@media(max-width:768px) {
+    .SW3__logo {
+        width: 60px;
+    }
+
+    .nav__link--anchor {
+        font-size: 12px;
+    }
+}
+
+@media(max-width:1024px){
+    .nav__link--anchor {
+        font-size: 14px;
+    }
+}
+
+/* LANDING PAGE */
+.header__container {
+    height: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__title {
+    font-size: 5vw;
+    color: #fff;
+}
+
+.sub__title--container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid #fdae41;
+}
