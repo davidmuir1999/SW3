@@ -11,6 +11,11 @@
     <script src="https://kit.fontawesome.com/8c40c3a30f.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- <script type="text/javascript">
+        (function () {
+            emailjs.init("dSlgm8_3vYYWH9niU");
+        })();
+    </script> -->
 </head>
 
 <body>
@@ -112,7 +117,57 @@
                     <video class="promo__video" autoplay loop muted src="./Assets/SW3_Logo_Promo.mp4"
                         type="video/mp4"></video>
                 </div>
+                <a href="#">
+                    <button class="mail__btn click" onclick="toggleModal()">
+                        <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
+                        <lord-icon class="email__icon" src="https://cdn.lordicon.com/ehfubvwr.json" trigger="hover"
+                            colors="primary:#181818" state="hover">
+                        </lord-icon>
+                    </button>
+                </a>
         </header>
+        <div class="modal__email">
+            <div class="modal__half modal__about">
+                <figure class="modal__img">
+                    <img src="./Assets/SW3 Logo_prev_ui.png" alt="">
+                </figure>
+            </div>
+            <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contact">
+                    Contact Us
+                </h3>
+                <h4 class="modal__sub-title modal__sub-title--contact">
+                    We aim to respond to you as soon as possible!
+                </h4>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input class="input" name="user_name" type="text"></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input class="input" name="user_email" type="email"></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea class="input" name="message" type="text"></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">
+                        Submit
+                    </button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
+                    <lord-icon class="sending__icon" src="https://cdn.lordicon.com/rhvddzym.json" trigger="loop"
+                        colors="primary:#fdae41,secondary:#181818">
+                    </lord-icon>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message! We look forward to speaking to you soon.
+                </div>
+            </div>
+        </div>
         <section id="Latest-Releases">
             <div class="row">
                 <div class="track__section--container">
@@ -171,8 +226,8 @@
             <div class="row">
                 <div class="track__container">
                     <div>
-                        <img class="track2__single--cover" src="./Assets/Fool-Of-Me-SW3-Amanda-Wilson-Alex-Kirsch-Remix.jpg"
-                            alt="">
+                        <img class="track2__single--cover"
+                            src="./Assets/Fool-Of-Me-SW3-Amanda-Wilson-Alex-Kirsch-Remix.jpg" alt="">
                     </div>
                     <div class="socials__list">
                         <figure class="socials__link">
@@ -208,6 +263,79 @@
                 </div>
             </div>
         </section>
+        <section id="About">
+            <div class="row">
+                <div class="about__container">
+                    <div class="frosted">
+                        <h1 class="about__header">ABOUT</h1>
+                        <p class="about__para">SW3 Music are a UK based <span class="orange">Artist Development &
+                                Songwriting
+                                Production Team</span> who
+                            have been involved in the music industry for many years.</p>
+                        <p class="about__para">We have written songs for international artists and understand the
+                            importance of
+                            writing and producing commercial songs. SW3 Music has a team of talented songwriters and is
+                            <span class="orange">always
+                                on the look out for new talent.</span> We also have a music publishing division.
+                        </p>
+                    </div>
+                </div>
+        </section>
+        <footer>
+            <div class="row">
+                <div class="footer__container">
+                    <figure>
+                        <a href="#Home">
+                            <img class="footer__img click" src="./Assets/SW3 Logo_prev_ui.png" alt="">
+                        </a>
+                    </figure>
+                    <div>
+                        <a href="" class="link-light text-decoration-none">
+                            <i class="fa-brands fa-facebook footer__social--media click"></i>
+                        </a>
+                        <a href="" class="link-light text-decoration-none">
+                            <i class="fa-brands fa-instagram footer__social--media click"></i>
+                        </a>
+                        <a href="" class="link-light text-decoration-none">
+                            <i class="fa-brands fa-tiktok footer__social--media click"></i>
+                        </a>
+                        <a href="" class="link-light text-decoration-none">
+                            <i class="fa-brands fa-youtube footer__social--media click"></i>
+                        </a>
+                        <a href="" class="link-light text-decoration-none">
+                            <i class="fa-brands fa-spotify footer__social--media click"></i>
+                        </a>
+                    </div>
+                    <div class="footer__social--list">
+                        <a href="#Home" class="link-light text-decoration-none footer__social--link
+                    link__hover--effect
+                    click
+                    ">
+                            Home
+                        </a>
+                        <a href="#Latest-Releases" class="link-light text-decoration-none footer__social--link
+                    link__hover--effect
+                    click
+                    ">
+                            Music
+                        </a>
+                        <a href="#About" class="link-light text-decoration-none footer__social--link
+                    link__hover--effect
+                    click
+                    ">
+                            About Us
+                        </a>
+                        <a href="#" class="link-light text-decoration-none footer__social--link
+                    link__hover--effect
+                    click
+                    ">
+                            Contact Us
+                        </a>
+                    </div>
+                    <div class="footer__copyright">© 2022 SW3 Music. All Rights Reserved. </div>
+                </div>
+            </div>
+        </footer>
 
 </body>
 
